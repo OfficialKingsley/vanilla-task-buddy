@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tuddy</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="body_container">
+      <header class="main_header">
+        <h1>Task Buddy</h1>
+        <button id="toggle_form"></button>
+      </header>
+      <main>
+        <div class="add_form_container" id="add_form_container">
+          <form action="" class="add_form" id="add_form">
+            <div class="close_form_section">
+              <span class="close_btn" id="close_form"> &times; </span>
+            </div>
+            <h3>Add Task</h3>
+            <input type="text" class="title_input" name="title" required />
+            <input type="time" name="" id="time_input" required />
+            <textarea
+              name="description"
+              id="description_input"
+              cols="30"
+              rows="10"
+              placeholder="Description"
+            ></textarea>
+            <div class="reminder">
+              <label for="reminder">Reminder</label>
+              <input type="checkbox" name="reminder" id="reminder_input" />
+            </div>
+            <button type="submit" class="submit_btn" id="add_task">
+              Add Task
+            </button>
+          </form>
+        </div>
+        <div class="tasks_section">
+          <h2>Tasks</h2>
+          <section id="tasks"></section>
+        </div>
+      </main>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

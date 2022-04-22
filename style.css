@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Consolas, "Courier New", monospace;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: lightgray;
+}
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+}
+.main_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 5px solid green;
+  margin-bottom: 1rem;
+}
+.body_container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.main_header button {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 0.7rem;
+}
+.add_form_container {
+  display: none;
+}
+.add_form_container.open {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.add_form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  background-color: white;
+}
+.close_form_section #close_form {
+  cursor: pointer;
+  color: red;
+  font-size: 1.3rem;
+  /* border: 1px solid red; */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#close_form:hover {
+  background-color: lightgray;
+}
+.close_form_section {
+  text-align: right;
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.add_form {
+  border: 5px solid red;
+  width: 80%;
+  max-width: 500px;
+}
+.add_form > * {
+  width: 100%;
+
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+.add_form textarea {
+  resize: none;
+}
+.add_form > input,
+.add_form > textarea,
+.add_form > button {
+  padding: 0.5rem 0.5rem;
+}
+.add_form > button {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  cursor: pointer;
+}
+.reminder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+}
+.reminder label {
+  cursor: pointer;
+}
+#tasks {
+  overflow-y: scroll;
+  height: 70vh;
+  padding: 0 1rem;
+}
+
+.tasks_section > h1,
+.tasks_section > h2,
+.tasks_section > h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.task .check_description {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 0.7rem;
+  margin-bottom: 1rem;
+}
+.task {
+  border: 2px solid green;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+}
+.task hr {
+  margin: 1rem 0;
+}
+.task .task_title {
+  font-size: 1.7rem;
+}
+.task_header {
+  display: flex;
+  justify-content: space-between;
+}
+.task_header span {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: red;
+}
+.description_container.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.description_container > .description_content {
+  width: 80%;
+  max-width: 550px;
+  height: 70vh;
+  max-width: 400px;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.description_container {
+  display: none;
+}
+.description_content .close_section {
+  /* border: 1px solid red; */
+  font-size: 1.2rem;
+  color: red;
+  text-align: right;
+  width: 100%;
+}
+.description_content .close_section .close_description {
+  cursor: pointer;
+}
+.description_content .description_title {
+  margin: 1rem 0;
+  text-align: center;
+  width: 100%;
+}
+.description_content .description_text {
+  margin: 1rem 0;
+  flex: 1;
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  border: 1px solid red;
+  text-align: left;
+  line-height: 25px;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+.description_content > .time_due {
+  text-align: left;
+  width: 100%;
+}
+.reminder_container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle_btn {
+  width: 30px;
+  height: 15px;
+  background-color: gray;
+  border-radius: 20px;
+  /* padding: 3px 0px; */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  transition: all 0.3s ease-in-out;
+}
+.toggle_btn .inner_circle {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid black;
+  cursor: pointer;
+}
+.toggle_btn.active {
+  background-color: #00acee;
+  justify-content: flex-end;
+}
